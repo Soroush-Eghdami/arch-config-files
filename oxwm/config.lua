@@ -67,13 +67,13 @@ local blocks = {
         color = colors.lavender,
         underline = false,
     }),
-    oxwm.bar.block.shell({
-        format = "{}",
-        command = "uname -r",
-        interval = 999999999,
-        color = colors.red,
-        underline = true,
-    }),
+--    oxwm.bar.block.shell({
+--      format = "{}",
+--      command = "uname -r",
+--      interval = 999999999,
+--      color = colors.red,
+--      underline = true,
+--  }),
     oxwm.bar.block.static({
         text = "│",
         interval = 999999999,
@@ -99,6 +99,13 @@ local blocks = {
         -- click: run a command when the block is clicked
         -- click = "alacritty -e btop",
         -- click = { command = "bluetui", floating = true },
+    }),
+    oxwm.bar.block.shell({
+        format = "{}",
+        command = "playerctl metadata --format '♪ {{ artist }} - {{ title }}' 2>/dev/null",
+        interval = 2,
+        color = colors.purple,
+        underline = true,
     }),
 };
 
