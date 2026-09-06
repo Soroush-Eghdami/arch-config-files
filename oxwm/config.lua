@@ -74,12 +74,12 @@ local blocks = {
 --      color = colors.red,
 --      underline = true,
 --  }),
-    oxwm.bar.block.static({
-        text = "│",
-        interval = 999999999,
-        color = colors.lavender,
-        underline = false,
-    }),
+--  oxwm.bar.block.static({
+--      text = "│",
+--      interval = 999999999,
+--      color = colors.lavender,
+--      underline = false,
+--  }),
     oxwm.bar.block.datetime({
         format = "{}",
         date_format = "%a, %b %d - %-I:%M %P",
@@ -99,6 +99,12 @@ local blocks = {
         -- click: run a command when the block is clicked
         -- click = "alacritty -e btop",
         -- click = { command = "bluetui", floating = true },
+    }),
+    oxwm.bar.block.static({
+        text = "│",
+        interval = 999999999,
+        color = colors.lavender,
+        underline = false,
     }),
     oxwm.bar.block.shell({
         format = "{}",
